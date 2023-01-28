@@ -13,7 +13,7 @@
 - [Deployment/Live Demo](#deploymentlive-demo)
 </details>
 
-### Description
+## Description
 
 The chat app is a real time application , users can join a room and chat with individuals in that specific room. \
 This app uses Socket.IO library that built on top of the WebSocket protocol ,This allowed us to set up an application with real time bidirectional communication where the client can send information to the server and the server can send information to the client over this persistent connection.
