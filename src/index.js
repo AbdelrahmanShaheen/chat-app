@@ -36,7 +36,7 @@ io.on("connection", (socket) => {
         generateMessage("Admin", `${user.username} has joined!`)
       );
     socket.emit("message", generateMessage("Admin", "Welcome!"));
-    io.to(room).emit("roomData", {
+    io.to(user.room).emit("roomData", {
       room: user.room,
       users: getUsersInRoom(user.room),
     });
@@ -75,7 +75,6 @@ io.on("connection", (socket) => {
     }
   });
 });
-console.log(arguments);
 server.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
